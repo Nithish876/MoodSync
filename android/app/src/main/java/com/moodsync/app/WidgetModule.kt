@@ -520,8 +520,8 @@ class WidgetModule(reactContext: ReactApplicationContext) : ReactContextBaseJava
             editor.apply()
             
             // Update widgets
-            // updateSmallWordWidgets()  // <-- Comment this out by adding // at the beginning
-            // updateLargeWordWidgets()  // <-- Comment this out by adding // at the beginning
+             updateSmallWordWidgets(getContext())
+             updateLargeWordWidgets(getContext())  
             Log.d(TAG, "Updated user word cloud")
             
             promise?.resolve(null)
