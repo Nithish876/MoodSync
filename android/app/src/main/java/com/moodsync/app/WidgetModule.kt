@@ -194,8 +194,8 @@ class WidgetModule(reactContext: ReactApplicationContext) : ReactContextBaseJava
             
             // Update widgets if requested
             if (forceUpdate) { 
-             updateSmallWordWidgets(getContext())
-             updateLargeWordWidgets(getContext())
+             updateSmallWordWidgets(getContext()) 
+             updateLargeWordWidgets(getContext()) 
                 }
             
             Log.d(TAG, "Synced word cloud data")
@@ -598,7 +598,7 @@ class WidgetModule(reactContext: ReactApplicationContext) : ReactContextBaseJava
         context.sendBroadcast(intent)
     }
 
-    private fun updateSmallWordWidgets(context: Context? = null) {
+    private fun updateSmallWordWidgets(context: Context = getContext()) {
         val actualContext = context ?: getContext()
         val intent = Intent(actualContext, SmallWordWidget::class.java)
         intent.action = AppWidgetManager.ACTION_APPWIDGET_UPDATE
@@ -621,7 +621,7 @@ class WidgetModule(reactContext: ReactApplicationContext) : ReactContextBaseJava
         context.sendBroadcast(intent)
     }
 
-    private fun updateLargeWordWidgets(context: Context? = null) {
+    private fun updateLargeWordWidgets(context: Context = getContext()) {
         val actualContext = context ?: getContext()
         val intent = Intent(actualContext, LargeWordWidget::class.java)
         intent.action = AppWidgetManager.ACTION_APPWIDGET_UPDATE
