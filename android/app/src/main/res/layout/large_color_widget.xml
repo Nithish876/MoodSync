@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    android:background="@drawable/widget_background">
+
+    <TextView
+        android:id="@+id/widget_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="My Mood"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="4dp" />
+
+    <!-- Glass ball container -->
+    <RelativeLayout
+        android:id="@+id/glass_ball_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/widget_title"
+        android:layout_above="@id/mood_text_container">
+
+        <ImageView
+            android:id="@+id/glass_ball"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/glass_ball_transparent"
+            android:scaleType="fitCenter"
+            android:padding="16dp" />
+    </RelativeLayout>
+
+    <!-- Separate container for mood text -->
+    <LinearLayout
+        android:id="@+id/mood_text_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/date_view"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/mood_summary_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:gravity="center"
+            android:text=""
+            android:textSize="16sp"
+            android:fontFamily="sans-serif"
+            android:shadowColor="#000000"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="2"
+            android:maxLines="3"
+            android:ellipsize="end" />
+    </LinearLayout>
+
+    <!-- Empty state text view -->
+    <TextView
+        android:id="@+id/empty_state_text"
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:textColor="#FFFFFF"
+        android:text="Tap to add your mood"
+        android:textSize="16sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/date_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Today"
+        android:textColor="#CCCCCC"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="4dp" />
+</RelativeLayout>

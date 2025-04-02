@@ -4,20 +4,49 @@
   "main": "index.ts",
   "scripts": {
     "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
-    "web": "expo start --web"
+    "android": "expo run:android",
+    "ios": "expo run:ios",
+    "web": "expo start --web",
+    "build:plugin": "cd plugin && tsc"
   },
   "dependencies": {
-    "expo": "~52.0.28",
+    "@expo/vector-icons": "^14.0.4",
+    "@react-native-async-storage/async-storage": "^2.1.2",
+    "@react-native-clipboard/clipboard": "^1.16.1",
+    "@react-native-firebase/app": "^21.13.0",
+    "@react-native-firebase/messaging": "^21.12.0",
+    "@react-navigation/bottom-tabs": "^7.2.0",
+    "@react-navigation/native": "^7.0.14",
+    "@react-navigation/native-stack": "^7.2.0",
+    "@shopify/react-native-skia": "^1.5.0",
+   "expo": "^52.0.0",
+    "expo-clipboard": "^7.0.1",
+    "expo-config-plugins": "^0.1.2",
+    "expo-dev-client": "~5.0.12",
+    "expo-linear-gradient": "~14.0.2",
+    "expo-notifications": "~0.29.14",
     "expo-status-bar": "~2.0.1",
-    "react": "18.3.1",
-    "react-native": "0.76.6"
+    "firebase": "^9.23.0",
+    "react": "^18.3.1",
+    "react-native": "0.76.7",
+    "react-native-element-dropdown": "^2.12.4",
+    "react-native-gesture-handler": "~2.20.2",
+    "react-native-reanimated": "^3.16.1",
+    "react-native-safe-area-context": "4.12.0",
+    "react-native-screens": "~4.4.0",
+    "xcode": "^3.0.1",
+    "expo-build-properties": "~0.13.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.25.2",
-    "@types/react": "~18.3.12",
-    "typescript": "^5.3.3"
+    "@babel/core": "^7.26.7",
+    "@types/fs-extra": "^11.0.4",
+    "@types/glob": "^8.1.0",
+    "@types/react": "^18.3.12",
+    "@types/react-native": "^0.73.0",
+    "expo-module-scripts": "^4.0.3",
+    "fs-extra": "^11.3.0",
+    "glob": "^8.1.0",
+    "typescript": "^5.7.3"
   },
   "private": true
 }

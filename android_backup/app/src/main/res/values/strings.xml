@@ -1,0 +1,17 @@
+<resources>
+  <string name="app_name">MoodSync</string>
+  <string name="expo_splash_screen_resize_mode" translatable="false">contain</string>
+  <string name="expo_splash_screen_status_bar_translucent" translatable="false">false</string>
+  <string name="small_widget_description">Shows your mood or a friend\'s mood</string>
+  <string name="large_widget_description">Shows your mood alongside a friend\'s mood</string>
+  <string name="small_color_widget_description">Display your mood color in a compact widget</string>
+  <string name="small_word_widget_description">Display your mood words in a compact widget</string>
+  <string name="large_color_widget_description">Display mood color mix in a large glass ball widget</string>
+  <string name="large_word_widget_description">Display mood thought bubble in a large widget</string>
+  <string name="widget_configure">Configure Widget</string>
+  <string name="widget_default_text">Tap to update mood</string>
+  <string name="widget_error">Error loading data</string>
+  <string name="widget_loading">Loading...</string>
+  <string name="default_notification_channel_id">mood_updates</string>
+  <string name="default_notification_channel_name">Mood Updates</string>
+</resources>

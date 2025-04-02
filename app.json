@@ -1,28 +1,51 @@
 {
   "expo": {
-    "name": "MoodSyncNew",
-    "slug": "MoodSyncNew",
+    "name": "moodsync",
+    "slug": "moodsync",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
-    "newArchEnabled": true,
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
+    "assetBundlePatterns": ["**/*"],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.moodsync.app",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "icon": "./assets/icon.png",
+      "splash": {
+        "image": "./assets/splash-icon.png"
+      },
+      "package": "com.moodsync.app"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "aa97eeea-cd47-4c8e-8b9c-0505aa12208c"
+      }
+    },
+    "plugins": [["./app.plugin.js", {}]],
+    "experiments": {
+      "newArchEnabled": true
     }
-  }
+  },
+  "dependencies": {
+    "@react-native-firebase/app": "^21.7.1",
+    "firebase": "^11.2.0"
+  },
+  "newArchEnabled": "true"
 }
